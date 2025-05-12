@@ -1,8 +1,8 @@
 - name: configure mysql server
   hosts: mysql
   become: yes # To given the sudo access
-  # vars:
-  #   mysql_root_password: ExpenseApp@1 # Declare the MySQL Server password
+  vars:
+    mysql_root_password: ExpenseApp@1 # Declare the MySQL Server password
   tasks:
   # - name: Install MySQL libraries (Depenciences)
   #   ansible.builtin.pip:
