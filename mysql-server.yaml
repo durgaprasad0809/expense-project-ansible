@@ -4,13 +4,13 @@
   vars:
     mysql_root_password: ExpenseApp@1 # Declare the MySQL Server password
   tasks:
-  # - name: Install MySQL libraries (Depenciences)
-  #   ansible.builtin.pip:
-  #     name: "{{ item }}"
-  #     executable: pip3.9
-  #   loop:
+  - name: Install MySQL libraries (Depenciences)
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
   #   - cryptography
-  #   - PyMySQL
+     - PyMySQL
 
   - name: Install MySQL server
     ansible.builtin.package:
